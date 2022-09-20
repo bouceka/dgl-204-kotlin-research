@@ -59,6 +59,8 @@ For anyone who would wonder how the services communicate with each other, there 
 <p align="center">
 <img src="./assets/messaging-request.jpg" height="auto" width="450">
 <p align="center"><i>Messaging system architecture (request)</i></p>
+</p>
+<p align="center">
 <img src="./assets/messaging-response.jpg" height="auto" width="450">
 <p align="center"><i>Messaging system architecture (response)</i></p>
 </p>
