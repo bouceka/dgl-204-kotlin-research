@@ -2,7 +2,7 @@
 
 ## Kotlin Documentation
 
-Kotlin documentation is an artifact that describes the programming language in usage. Any user, developer, or architect can read it and implement it in their projects. It also refers to other libraries that can be combined, such as GraphQL, RabbitMQ, ReactJS, etc. It provides a solid explanation of the primary usage of the language. On top of it, Kotlin documentation provides a short education walk through for users without prior knowledge.
+[Kotlin documentation](https://kotlinlang.org/docs/home.html) is an artifact that describes the programming language in usage. Any user, developer, or architect can read it and implement it in their projects. It also refers to other libraries that can be combined, such as GraphQL, RabbitMQ, ReactJS, etc. It provides a solid explanation of the primary usage of the language. On top of it, Kotlin documentation provides a short education walk through for users without prior knowledge.
 
 ### Target Audience
 
@@ -58,7 +58,7 @@ For anyone who would wonder how the services communicate with each other, there 
 
 <p align="center">
 <img src="./assets/messaging-request.jpg" height="auto" width="450">
-<img src="./assets/messaging-response.jpg" height="auto" width="450">
+<img src="./assetss/messaging-response.jpg" height="auto" width="450">
 <p align="center"><i>Messaging system architecture</i></p>
 </p>
 
