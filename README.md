@@ -1,7 +1,5 @@
 # Kotlin overview research (Micronaut) - part 1
 
-Fill out this template as per the directions on our [course site](https://ash-teach.github.io/dgl-204/#/dgl204-2022fa/week-01#assignments)
-
 ## Kotlin Documentation
 
 Kotlin documentation is an artifact that describes the programming language in usage. Any user, developer, or architect can read it and implement it in their projects. It also refers to other libraries that can be combined, such as GraphQL, RabbitMQ, ReactJS, etc. It provides a solid explanation of the primary usage of the language. On top of it, Kotlin documentation provides a short education walk through for users without prior knowledge.
