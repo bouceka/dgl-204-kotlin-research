@@ -29,13 +29,13 @@ _See in the image_
 <p align="center"><i>Monolithic architecture</i></p>
 </p>
 
-| :white_check_mark: Advantage | :x: Disadvantage                                                                       |
-| ---------------------------- | -------------------------------------------------------------------------------------- |
-| Easy to develop              | A simple change can break the app if the developer doesn't understand the app as whole |
-| Easy to manage               | It is language and framework depended (must be written in one lang)                    |
-| Easy to deploy               | Growth, the bigger the app the worse the deployment is                                 |
-|                              | Traffic, if our app becomes popular. One server wont handle all the traffic.           |
-|                              | It needs to deploy another version of the app                                          |
+| :white_check_mark: Advantage           | :x: Disadvantage                                                                       |
+| -------------------------------------- | -------------------------------------------------------------------------------------- |
+| Easy to develop (One app at one place) | A simple change can break the app if the developer doesn't understand the app as whole |
+| Easy to manage (used one language)     | It is language and framework depended (must be written in one lang)                    |
+| Easy to deploy                         | Growth, the bigger the app the worse the deployment is                                 |
+|                                        | Traffic, if our app becomes popular. One server wont handle all the traffic.           |
+|                                        | It needs to deploy another version of the app                                          |
 
 ### Microservices
 
