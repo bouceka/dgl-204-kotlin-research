@@ -10,11 +10,11 @@ Kotlin documentation is for anyone who wants to learn the Kotlin language or ref
 
 ## Research Overview - Micronaut
 
-For most of my time at NIC, I have been focused on the visual aspects of apps and the Front-end. I want to approach this research from the Back-end perspective and learn more about [microservices architecture](https://microservices.io/).
+For most of my time at NIC, I have been focused on the visual aspects of apps and the Front-end. I want to approach this research from the Back-end perspective and learn more about [microservices architecture](https://microservices.io/). Micronaut allows us to build microservices and serverless applications. As we will break it down it also comes with a lots lof built in features.
 
 ### What is microservices architecture?
 
-Before we jump on Micronaut, we should refresh what microservices are and the difference between microservices and monoliths.
+Before we jump on [Micronaut](https://micronaut.io/), we should refresh what microservices are and the difference between microservices and monoliths.
 
 ### Monolith
 
@@ -67,7 +67,11 @@ For anyone who would wonder how the services communicate with each other, there 
 
 ## Back to Micronaut
 
-After we recapped what microservices architecture is, we can dive in our concrete Kotlin option.
+After we recapped what microservices architecture is, we can dive into our concrete Kotlin option. _"Micronaut was released in 2018. It is an open source, JVM-based framework for building full-stack, modular and easy testable microservice and serverless applications"._ \[5\] Even though Micronaut is an open-source project, it is fully supported by [OCI](https://www.oracle.com/ca-en/cloud/).
+
+After recapping microservices architecture, we can dive into our concrete Kotlin option. Wait, Java already has [Spring](https://spring.io/) and [Spring Boot](https://spring.io/projects/spring-boot) for building either monolith applications or microservices. However, Spring focuses its energy on both, leaving the microservices part a bit behind and giving space for Micronaut.
+
+Micronaut was partially developed by developers who worked on Spring Boot, so it isn't surprising that it has many built-in features that improve existing frameworks. Micronaut supports many technologies such as Elasticsearch, GraphQL, RabbitMQ, Kafka, Redis, SQL databases, MongoDB etc. Lastly, Micronaut is multilingual and can be used in three languages Java, Kotlin, and Groovy.
 
 ## Resources
 
@@ -75,19 +79,20 @@ After we recapped what microservices architecture is, we can dive in our concret
 2. [What is Microservices Architecture?](https://cloud.google.com/learn/what-is-microservices-architecture) \[Website\]
 3. [What are Microservices?](https://www.youtube.com/watch?v=CdBtNQZH8a4) \[YouTube\]
 4. [Microservices with Node JS and React](https://www.udemy.com/course/microservices-with-node-js-and-react) \[Udemy\]
+5. [Micronaut for Microservices](https://medium.com/software-tidbits/micronaut-for-microservices-7322cc00fb6f) \[Medium\]
+6. [INTRODUCTION TO THE MICRONAUT FRAMEWORK: BUILDING ULTRA-LIGHTWEIGHT MICROSERVICES](https://micronaut.io/2018/11/08/introduction-to-micronaut-building-ultra-lightweight-microservices/) \[Website\]
+7. [Kotlin & Micronaut - Building a personal finance app](https://www.youtube.com/playlist?list=PLbsmalhjD-3YJ_9fl0uhCIl4EDy9t7adL) \[YouTube\]
 
-## \[Related GitHub Repo\]
+## GitHub repository using Micronaut and Kotlin
 
-### \[Title of repo\]
+### [market-api](https://github.com/zsiegel/market-api)
 
-### \[Author of repo\]
+### [Zac Siegel](https://www.zsiegel.com/)
 
-### \[Link to repo\]
+### https://github.com/zsiegel/market-api
 
-\[Write a brief description on the purpose of the repo\]
-
-**Note:** All your work should be _in your own words_. If you quote anyone, or if you use any resources other than the Kotlin Overview docs you should say so and provide a link in a **Bibliography**.
+Zac has created an excellent walk-through of how to build a microservices project about personal finances with Micronaut and Kotlin. He used Micronaut's integrated libraries for GraphQL, Postgres, JUnit, and more. In the video, he is getting familiar with and exploring Micronaut, which is very nice if you are a novice to Micronaut too. You can explore the technology with him.
 
 ## Reflection
 
-\[Use this space to reflect on what you learned. Consult me or the [course site](https://ash-teach.github.io/dgl-204/#/dgl204-2022fa/week-01#assignments) if you need help\]
+It has been my secret wish to learn microservices since I have run across them at my internship. I like that I could touch on this topic with Kotlin. Micronaut is a relatively new technology that hasn't been documented much. However, all the resources I have found so far were pretty solid. Also, its documentation is well done. I would love to explore it more.
