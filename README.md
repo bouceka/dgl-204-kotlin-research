@@ -2,23 +2,23 @@
 
 ## Kotlin Documentation
 
-[Kotlin documentation](https://kotlinlang.org/docs/home.html) is an artifact that describes the programming language in usage. Any user, developer, or architect can read it and implement it in their projects. It also refers to other libraries that can be combined, such as GraphQL, RabbitMQ, ReactJS, etc. It provides a solid explanation of the primary usage of the language. On top of it, Kotlin documentation provides a short education walk through for users without prior knowledge.
+[Kotlin documentation](https://kotlinlang.org/docs/home.html) is an artifact that describes the programming language in usage. Any user, developer, or architect can read it and implement it in their projects. It also refers to other libraries that can be combined, such as GraphQL, RabbitMQ, ReactJS, etc. It provides a solid explanation of the primary usage of the language. In addition, Kotlin documentation provides a short educational walk through for users without prior knowledge.
 
 ### Target Audience
 
-Kotlin documentation is for anyone who wants to learn the Kotlin language or refresh memory. It can happen anytime. Developers use multiple languages, and it's unlikely to remember all the syntax. Documentation is an excellent tool to have open while a developer is writing code.
+Kotlin documentation is for anyone who wants to learn the Kotlin language or brush up on it. Developers use multiple languages, and it's unlikely to remember all the syntax. Documentation is an excellent reference tool to have open while a developer is writing code.
 
 ## Research Overview - Micronaut
 
-For most of my time at NIC, I have been focused on the visual aspects of apps and the Front-end. I want to approach this research from the Back-end perspective and learn more about [microservices architecture](https://microservices.io/). Micronaut allows us to build microservices and serverless applications. As we will break it down it also comes with a lots lof built in features.
+For most of my time at NIC, I have been focused on the visual aspects of apps and the Front-end. I want to approach this research from the Back-end perspective and learn more about [microservices architecture](https://microservices.io/). Micronaut allows us to build microservices and serverless applications. We will break it down as it comes with a lot of built in features.
 
 ### What is microservices architecture?
 
-Before we jump on [Micronaut](https://micronaut.io/), we should refresh what microservices are and the difference between microservices and monoliths.
+Before we jump in [Micronaut](https://micronaut.io/), we should refresh our memory on what microservices are and the difference between microservices and monoliths.
 
 ### Monolith
 
-To understand microservices, we should look at what a monolith is. If we look at ExpressJS server-side app, we would take the whole app, deploy to a NodeJs server, and build it. There we would make the entire app. All the requests would be directed to the same API address. All the features would have access to the same database.
+To understand microservices, we should look at what a monolith is. For example, if we look at ExpressJS server-side app, we would take the whole app, deploy to a NodeJs server, and build it. The entire app would be on one particular server. All the requests would be directed to the same API address. All the features would have access to the same database.
 
 _See in the image_
 
@@ -27,13 +27,12 @@ _See in the image_
 <p align="center"><i>Monolithic architecture</i></p>
 </p>
 
-| :white_check_mark: Advantage           | :x: Disadvantage                                                                       |
-| -------------------------------------- | -------------------------------------------------------------------------------------- |
-| Easy to develop (One app at one place) | A simple change can break the app if the developer doesn't understand the app as whole |
-| Easy to manage (used one language)     | It is language and framework depended (must be written in one lang)                    |
-| Easy to deploy                         | Growth, the bigger the app the worse the deployment is                                 |
-|                                        | Traffic, if our app becomes popular. One server wont handle all the traffic.           |
-|                                        | It needs to deploy another version of the app                                          |
+| :white_check_mark: Advantage           | :x: Disadvantage                                                                         |
+| -------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Easy to develop (one app in one place) | A simple change can break the app if the developer doesn't understand the app as a whole |
+| Easy to manage (uses one language)     | It is language and framework dependent (must be written in one language).                |
+| Easy to deploy                         | As the app grows, the deployment gets worse                                              |
+|                                        | If our app becomes popular, one server won't able to handle all the traffic              |
 
 ### Microservices
 
@@ -44,17 +43,17 @@ We split the app into smaller independent services. A single microservice contai
 <p align="center"><i>Microservices architecture</i></p>
 </p>
 
-| :white_check_mark: Advantage                                      | :x: Disadvantage                                                                         |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| All services are self contained                                   | Data management between services (extremely difficult)                                   |
-| If one service crashes the portion of our app will work just fine | It is difficult to design                                                                |
-| Can be written in multiple languages and frameworks               | Storing data in repository (Monorepo, Polyrepo)                                          |
-| Easy to scale if traffic is higher                                | Communicating between services (API Calls, Message Broker, Service Mesh)                 |
-| Independently deployable                                          | [Database-per-Service](https://microservices.io/patterns/data/database-per-service.html) |
+| :white_check_mark: Advantage                                   | :x: Disadvantage                                                                                                |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| All services are self contained                                | Data management between services is extremely difficult                                                         |
+| If one service crashes the rest of our app will work just fine | It is difficult to design                                                                                       |
+| Can be written in multiple languages and frameworks            | Designing repository structure of our code might be time consuming ex. Monorepo, Polyrepo                       |
+| Easy to scale if traffic is higher                             | Designing communicating between services is challenging (API Calls, Message Broker, Service Mesh)               |
+| Independently deployable                                       | [Database-per-Service](https://microservices.io/patterns/data/database-per-service.html) causes data redundancy |
 
 ### Messaging system
 
-For anyone who would wonder how the services communicate with each other, there is a simple diagram that illustrates that. It is a very simplified version of it. The communication works asynchronously between them due to the Event Bus. The Event Bus delegates events (API calls) between the services. In case one crashes, the other dependent service won't crash too.
+If you are wondering how the services communicate with each other, here is a simple diagram that illustrates that. It is a very simplified version of it. The communication works asynchronously between them due to the Event Bus. The Event Bus delegates events (API calls) between the services. In the case that one crashes, the other dependent service won't also crash.
 
 <p align="center">
 <img src="./assets/messaging-request.jpg" height="auto" width="450">
