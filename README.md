@@ -81,6 +81,8 @@ Micronaut was partially developed by developers who worked on Spring Boot, so it
 5. [Micronaut for Microservices](https://medium.com/software-tidbits/micronaut-for-microservices-7322cc00fb6f) \[Medium\]
 6. [INTRODUCTION TO THE MICRONAUT FRAMEWORK: BUILDING ULTRA-LIGHTWEIGHT MICROSERVICES](https://micronaut.io/2018/11/08/introduction-to-micronaut-building-ultra-lightweight-microservices/) \[Website\]
 7. [Kotlin & Micronaut - Building a personal finance app](https://www.youtube.com/playlist?list=PLbsmalhjD-3YJ_9fl0uhCIl4EDy9t7adL) \[YouTube\]
+8. [IT Operations](https://www.ibm.com/cloud/learn/it-operations) \[Website\]
+9. [DevOps](https://www.ibm.com/cloud/learn/devops-a-complete-guide) \[Website\]
 
 ## GitHub repository using Micronaut and Kotlin
 
@@ -94,4 +96,8 @@ Zac has created an excellent walk-through of how to build a microservices projec
 
 ## Reflection
 
+Microservices architecture is challenging to design regardless of the language in which it is written. The most significant difficulty with this research is picking up why an app should be developed this way. Once this question is understood, the most challenging is knowing what technologies must be included. It also requires a decent knowledge of [Ops](https://www.ibm.com/cloud/learn/it-operations) from the [DevOps](https://www.ibm.com/cloud/learn/devops-a-complete-guide) circle. I consider myself a Front-End developer, so every aspect of this project is testing my knowledge. Notably, the diagrams I have created based on resources I have watched helped me grasp this topic better.
+
 It has been my secret wish to learn microservices since I have run across them at my internship. I like that I could touch on this topic with Kotlin. Micronaut is a relatively new technology that hasn't been documented much. However, all the resources I have found so far were pretty solid. Also, its documentation is well done. I would love to explore it more.
+
+*\*Disclaimer: All illustrations were made in Figma by me\**
