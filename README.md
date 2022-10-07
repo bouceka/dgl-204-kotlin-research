@@ -72,6 +72,68 @@ After recapping microservices architecture, we can dive into our concrete Kotlin
 
 Micronaut was partially developed by developers who worked on Spring Boot, so it isn't surprising that it has many built-in features that improve existing frameworks. Micronaut supports many technologies such as Elasticsearch, GraphQL, RabbitMQ, Kafka, Redis, SQL databases, MongoDB etc. Lastly, Micronaut is multilingual and can be used in three languages Java, Kotlin, and Groovy.
 
+## GitHub repository using Micronaut and Kotlin
+
+### [market-api](https://github.com/zsiegel/market-api)
+
+### [Zac Siegel](https://www.zsiegel.com/)
+
+### https://github.com/zsiegel/market-api
+
+Zac has created an excellent walk-through of how to build a microservices project about personal finances with Micronaut and Kotlin. He used Micronaut's integrated libraries for GraphQL, Postgres, JUnit, and more. In the video, he is getting familiar with and exploring Micronaut, which is very nice if you are a novice to Micronaut too. You can explore the technology with him.
+
+## Code sample
+
+Micronaut is relatively new, so developers have been learning this technology. This repository is a good example. Its author is playing around with Kotlin, Micronaut, Docker, Graphql, JDBI, Flyway and more. He has made a straightforward app service that helps to maintain personal investments.
+
+Micronaut is a framework built on JVM and sits on many Java standards. One is [JDBC](https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc), which helps link the app to the database. We can demonstrate how Micronaut connects to the database. Let's take a closer look at this short piece of code.
+
+And the tool that we can see here is [JDBI](https://jdbi.org/). It is a query tool that allows idiomatic access to SQL databases. It will enable us to create interfaces, annotate them with a SQL command, and call it anytime needed.
+
+[DatabaseTables](https://github.com/zsiegel/market-api/blob/trunk/src/main/kotlin/com/zsiegel/market/database/DatabaseTables.kt)
+```kotlin
+
+@Factory
+class DatabaseTablesFactory(private val jdbi: Jdbi) {
+
+    @Prototype
+    fun accounts(): AccountsTable {
+        return jdbi.onDemand(AccountsTable::class)
+    }
+}
+
+interface AccountsTable {
+
+    @SqlQuery("select * from accounts")
+    fun accounts(): List<Account>
+
+}
+```
+
+Let's see another code example. This code example is a little incomplete because he was testing fetching data from the DB (AccountsTable) but didn't actually send them to the client. This code snippet shows how to build a GraphQL query in Micronaut. It is a singleton, so it makes only one instance for the whole app anywhere it's initialized. It returns a list of Accounts. (Account is a GraphQl data class)
+
+[GraphQLFactory](https://github.com/zsiegel/market-api/blob/trunk/src/main/kotlin/com/zsiegel/market/graphql/GraphQLFactory.kt)
+```kotlin
+@Singleton
+class AccountsFetcher(private val accountsTable: AccountsTable) : GraphQLQuery {
+
+    @GraphQLDescription("Gets a list of accounts")
+    fun accounts(environment: DataFetchingEnvironment): List<Account> {
+        val accounts = accountsTable.accounts()
+        return listOf(
+                Account("1", "Savings", "This is my piggy bank"),
+                Account("2", "Checking", "This is my disposable income")
+        )
+    }
+}
+ ```
+
+## Summary
+
+This repository isn't the best example of how to make REST applications in Micronaut. Still, the videos the author made walked through the rough parts of implementing many technologies and explained their roles in Java based world. Some bits helped me create the "Hello World" app for my project and deploy it.
+
+
+
 ## Resources
 
 1. [Microservices explained - the What, Why and How?](https://www.youtube.com/watch?v=rv4LlmLmVWk) \[YouTube\]
@@ -84,20 +146,18 @@ Micronaut was partially developed by developers who worked on Spring Boot, so it
 8. [IT Operations](https://www.ibm.com/cloud/learn/it-operations) \[Website\]
 9. [DevOps](https://www.ibm.com/cloud/learn/devops-a-complete-guide) \[Website\]
 
-## GitHub repository using Micronaut and Kotlin
 
-### [market-api](https://github.com/zsiegel/market-api)
-
-### [Zac Siegel](https://www.zsiegel.com/)
-
-### https://github.com/zsiegel/market-api
-
-Zac has created an excellent walk-through of how to build a microservices project about personal finances with Micronaut and Kotlin. He used Micronaut's integrated libraries for GraphQL, Postgres, JUnit, and more. In the video, he is getting familiar with and exploring Micronaut, which is very nice if you are a novice to Micronaut too. You can explore the technology with him.
 
 ## Reflection
-
+#### Part 1
 Microservices architecture is challenging to design regardless of the language in which it is written. The most significant difficulty with this research is picking up why an app should be developed this way. Once this question is understood, the most challenging is knowing what technologies must be included. It also requires a decent knowledge of [Ops](https://www.ibm.com/cloud/learn/it-operations) from the [DevOps](https://www.ibm.com/cloud/learn/devops-a-complete-guide) circle. I consider myself a Front-End developer, so every aspect of this project is testing my knowledge. Notably, the diagrams I have created based on resources I have watched helped me grasp this topic better.
 
 It has been my secret wish to learn microservices since I have run across them at my internship. I like that I could touch on this topic with Kotlin. Micronaut is a relatively new technology that hasn't been documented much. However, all the resources I have found so far were pretty solid. Also, its documentation is well done. I would love to explore it more.
+#### Part 2
+The code itself that I have reviewed left more questions than answers. Because I chose a poor repository that focused more on introducing the environment over the code quality, it made me search for better examples and repositories on GitHub. Despite the repository being small, poorly written and incomplete, it was a challenge to backtrack the code, and it taught me more about Kotlin technologies. (Unfortunately, I haven't watched all his video series. It was 10 hours long.)
+
+However, the videos gave me solid theoretical knowledge of Kotlin's workings. For example, I didn't know it had many Java-supported libraries. That is excellent news. Java is very popular.
+
+Lastly, I want to say it was challenging to research such a new technology written in a language I barely know. After all, this process gave me many solid resources to start working on my project and develop something more presentable.
 
 *\*Disclaimer: All illustrations were made in Figma by me\**
